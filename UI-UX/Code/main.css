@@ -1,8 +1,173 @@
+#footer {
+  position: fixed;
+  bottom: 0;
+}
+
 #header a {
   color: #053015;
   font-weight: 600;
 }
 
+#goals {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 50%;
+  height: 90vh;
+  border-left: 1px solid #053015;
+  border-right: 1px solid #053015;
+}
+
 .bg-dark {
   background: #0e9241 !important;
 }
+
+.hamburguer-menu {
+  padding-right: 0;
+}
+
+.hamburguer-menu img {
+  width: 24px;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 40px);
+  grid-template-areas: ". goal1 goal1 goal1 goal1 goal1 goal1 ."
+                       ". goal2 goal2 goal2 goal2 goal2 goal2 ."
+                       ". goal3 goal3 goal3 goal3 goal3 goal3 ."
+                       ". goal4 goal4 goal4 goal4 goal4 goal4 ."
+                       ". goal5 goal5 goal5 goal5 goal5 goal5 ."
+                       ". goal6 goal6 goal6 goal6 goal6 goal6 ."
+                       ". goal7 goal7 goal7 goal7 goal7 goal7 ."
+                       ". goal8 goal8 goal8 goal8 goal8 goal8 .";
+}
+
+.grilla li {
+  list-style: none;
+  display: flex;
+  margin: auto;
+  height: 20px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #0e9241;
+  border-radius: 50%;
+  background-color: #289451;
+  margin-right: 10px;
+}
+
+.grilla p {
+  border-bottom: 1.5px solid rgba(31, 122, 66, 0.4);
+  margin-bottom: 0.3rem;
+}
+
+.grilla div:nth-of-type(1) {
+  border: none;
+}
+.grilla div:nth-of-type(3) {
+  border: none;
+}
+.grilla div:nth-of-type(5) {
+  border: none;
+}
+.grilla div:nth-of-type(7) {
+  border: none;
+}
+.grilla div:nth-of-type(9) {
+  border: none;
+}
+.grilla div:nth-of-type(11) {
+  border: none;
+}
+.grilla div:nth-of-type(13) {
+  border: none;
+}
+.grilla div:nth-of-type(15) {
+  border: none;
+}
+
+/* TEMPORAL */
+.grilla div {
+  border: none;
+}
+
+.grilla .goal1,
+.grilla .goal2,
+.grilla .goal3,
+.grilla .goal4,
+.grilla .goal5,
+.grilla .goal6,
+.grilla .goal7,
+.grilla .goal8 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  background-color: rgba(14, 146, 65, .4);
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.grilla .tick1,
+.grilla .tick2,
+.grilla .tick3,
+.grilla .tick4,
+.grilla .tick5,
+.grilla .tick6,
+.grilla .tick7,
+.grilla .tick8 {
+  align-self: center;
+}
+
+.tick1 {
+  grid-area: tick1;
+}
+.tick2 {
+  grid-area: tick2;
+}
+.tick3 {
+  grid-area: tick3;
+}
+.tick4 {
+  grid-area: tick4;
+}
+.tick5 {
+  grid-area: tick5;
+}
+.tick6 {
+  grid-area: tick6;
+}
+.tick7 {
+  grid-area: tick7;
+}
+.tick8 {
+  grid-area: tick8;
+}
+
+.goal1 {
+  grid-area: goal1;
+}
+.goal2 {
+  grid-area: goal2;
+}
+.goal3 {
+  grid-area: goal3;
+}
+.goal4 {
+  grid-area: goal4;
+}
+.goal5 {
+  grid-area: goal5;
+}
+.goal6 {
+  grid-area: goal6;
+}
+.goal7 {
+  grid-area: goal7;
+}
+.goal8 {
+  grid-area: goal8;
+}
+
