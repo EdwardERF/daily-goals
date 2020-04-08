@@ -16,7 +16,20 @@ body {
   height: 90vh;
 }
 
-.navbar {
+/* TEST GRID */
+
+  .main-container {
+    display: grid;
+    grid-template-rows: 30px 1fr 30px;
+    grid-template-areas: 'navbar'
+                         'main-content'
+                         'footer';
+  }
+
+/* /TEST GRID */
+
+.navbar,
+.footer {
   display: inline-block;
   background-color: #16B553;
   position: relative;
@@ -39,6 +52,19 @@ body {
 .nav-container h2 {
   font-family: 'Open Sans';
   font-size: 1rem;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 3px;
+}
+
+.footer h3 {
+  font-family: 'Open Sans';
+  padding-top: 5px;
+  font-size: .6rem;
   color: white;
 }
 
