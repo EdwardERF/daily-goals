@@ -8,6 +8,13 @@ body {
   font-size: 19px;
 }
 
+button {
+  border-width: 0;
+  border-style: none;
+  border-color: none;
+  border-image: none;
+}
+
 .main-container {
   border: 1px solid rgba(55, 52, 53, .2);
   background-color: rgba(68, 176, 110, .2);
@@ -67,25 +74,63 @@ body {
 }
 
 .main-content {
-  border: 1px solid rgba(68, 176, 110, .2);
-  background-color: rgba(68, 176, 110, .2);
   width: 80%;
   height: 86%;
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
-.main-content .goal {
+.main-content .day1,
+.main-content .day2,
+.main-content .day3,
+.main-content .day4,
+.main-content .day5,
+.main-content .day6,
+.main-content .day7 {
   width: 100%;
   display: inline-flex;
   justify-content: center;
 }
 
+.main-content .day-structure {
+  height: 13.5%;
+  width: 100%;
+}
+
+.main-content .good-day {
+  background-color: rgba(14, 146, 65, .4);
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+}
+
+.main-content .bad-day {
+  background-color: rgba(193, 52, 56, .4);
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+}
+
+.main-content .neutral-day {
+  background-color: rgba(250, 238, 64, .4);
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+}
+
+.emotions #comment-button {
+  border: none;
+  background: none;
+}
+
+.emotions .comment-button img {
+  height: 35px;
+}
+
 .main-content img {
   height: 30px;
-  margin-right: 10px;
 }
 
 .main-content input {
@@ -103,7 +148,7 @@ body {
 
 .emotions {
   display: flex;
-  justify-self: center;
+  justify-self: flex-end;
 }
 
 .emotions button {
