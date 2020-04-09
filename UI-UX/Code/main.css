@@ -12,21 +12,19 @@ body {
   border: 1px solid rgba(55, 52, 53, .2);
   background-color: rgba(68, 176, 110, .2);
   margin: 5vh auto;
-  width: 672px;
+  max-width: 672px;
+  width: 50%;
   height: 90vh;
 }
 
-/* TEST GRID */
-
-  .main-container {
-    display: grid;
-    grid-template-rows: 30px 1fr 30px;
-    grid-template-areas: 'navbar'
-                         'main-content'
-                         'footer';
-  }
-
-/* /TEST GRID */
+.main-container {
+  display: grid;
+  grid-template-rows: 30px 1fr 50px 30px;
+  grid-template-areas: 'navbar'
+                       'main-content'
+                       'footer'
+                       'emotions';
+}
 
 .navbar,
 .footer {
@@ -68,7 +66,72 @@ body {
   color: white;
 }
 
+.main-content {
+  border: 1px solid rgba(68, 176, 110, .2);
+  background-color: rgba(68, 176, 110, .2);
+  width: 80%;
+  height: 86%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.main-content .goal {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.main-content img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.main-content input {
+  width: 85%;
+  height: 30px;
+  background: none;
+  border-width: none;
+  border-style: none;
+  border-bottom: 1.2px dashed black;
+  font-family: 'Open Sans';
+  font-weight: 500;
+  font-size: 1rem;
+  color: #0E6931;
+}
+
+.emotions {
+  display: flex;
+  justify-self: center;
+}
+
+.emotions button {
+  margin: 0 20px;
+  border: 1px solid red;
+  width: 67px;
+  height: 33px;
+  border-radius: 2px;
+}
+
+.emotions .good {
+  border: none;
+  background-color: rgba(14, 146, 65, .4);
+}
+
+.emotions .bad {
+  border: none;
+  background-color: rgba(193, 52, 56, .4);
+}
+
+.emotions .neutral {
+  border: none;
+  background-color: rgba(250, 238, 64, .4);
+}
+
+/* ------------- */
 /* MEDIA QUERIES */
+/* ------------- */
 
 @media screen and (min-width: 2000px) {
   .main-container {
@@ -84,19 +147,45 @@ body {
     margin: 0 !important;
     padding: 0 !important;
     width: 100%;
-    height: 100%;
+    max-width: 768px;
+    height: 100vh;
   }
   
   .nav-container h2 {
     padding-top: 2px;
     font-size: .9rem;
   }
+
+  .main-content {
+    width: 70%;
+    height: 86%;
+  }
+
+  .main-content input {
+    font-size: .7rem;
+    width: 70%;
+    height: 75%;
+  }
 }
 
 @media screen and (max-width: 426px) {
+  .main-container {
+    min-width: 426px;
+    height: ;
+  }
+
   .nav-container h2 {
     padding-top: 3px;
     font-size: .8rem;
+  }
+
+  .main-content {
+    min-width: 426px;
+    height: 100%;
+  }
+
+  .emotions {
+    align-items: center;
   }
 }
 
