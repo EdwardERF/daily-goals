@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Daily Goals</title>
-    <link rel="stylesheet" href="~/css/main.css">
+    <title>@ViewData["Title"]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/@ViewData["CSS"]">
 </head>
 <body>
     <section class="main-container">
@@ -13,7 +14,7 @@
             <nav class="item navbar">
                 <div class="nav-container">
                     <img src="~/img/main-logo.png" alt="">
-                    <h2>Daily Goals</h2>
+                    <h2>@ViewData["Title"]</h2>
                     <img src="~/img/menu.png" alt="">
                 </div>
             </nav>

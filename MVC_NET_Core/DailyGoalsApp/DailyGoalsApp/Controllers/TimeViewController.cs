@@ -9,16 +9,21 @@ using DailyGoalsApp.Models;
 
 namespace DailyGoalsApp.Controllers
 {
-    public class HomeController : Controller
+    public class TimeViewController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<TimeViewController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public TimeViewController(ILogger<TimeViewController> logger)
         {
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Weekly()
+        {
+            return View();
+        }
+
+        public IActionResult Monthly()
         {
             return View();
         }
