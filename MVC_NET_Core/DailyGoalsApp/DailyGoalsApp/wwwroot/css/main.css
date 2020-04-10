@@ -1,0 +1,228 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 19px;
+}
+
+.main-container {
+    border: 1px solid rgba(55, 52, 53, .2);
+    background-color: rgba(68, 176, 110, .2);
+    margin: 5vh auto;
+    max-width: 672px;
+    width: 50%;
+    height: 90vh;
+}
+
+.main-container {
+    display: grid;
+    grid-template-rows: 30px 1fr 30px;
+    grid-template-areas: 'navbar'
+                         'container'
+                         'footer';
+}
+
+.navbar {
+    grid-area: navbar;
+}
+
+.container {
+    grid-area: container;
+}
+
+.emotions {
+    grid-area: emotions;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.navbar,
+.footer {
+    display: inline-block;
+    background-color: #16B553;
+    position: relative;
+    height: 30px;
+    width: 100%;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .nav-container img {
+        margin: 2px 10px 0;
+        height: 20px;
+    }
+
+    .nav-container h2 {
+        font-family: 'Open Sans';
+        font-size: 1rem;
+        color: white;
+    }
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 3px;
+}
+
+    .footer h3 {
+        font-family: 'Open Sans';
+        padding-top: 5px;
+        font-size: .6rem;
+        color: white;
+    }
+
+.container {
+    border: 1px solid rgba(68, 176, 110, .2);
+    background-color: rgba(68, 176, 110, .2);
+    width: 80%;
+    height: 86%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container .goal {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.container img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.container input {
+    width: 85%;
+    height: 30px;
+    background: none;
+    border-width: none;
+    border-style: none;
+    border-bottom: 1.2px dashed black;
+    font-family: 'Open Sans';
+    font-weight: 500;
+    font-size: .8rem;
+    color: #0E6931;
+}
+
+.content-container {
+    display: grid;
+    grid-template-rows: 85% 15%;
+    grid-template-areas: 'content-goals'
+                         'content-emotions';
+    height: 100%;
+}
+
+.content-goals {
+    grid-area: content-goals;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.content-emotions {
+    grid-area: content-emotions;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.emotions {
+    display: flex;
+    justify-content: center;
+}
+
+    .emotions button {
+        margin: 0 20px;
+        border: 1px solid red;
+        width: 67px;
+        height: 33px;
+        border-radius: 2px;
+    }
+
+    .emotions .good {
+        border: none;
+        background-color: rgba(14, 146, 65, .4);
+    }
+
+    .emotions .bad {
+        border: none;
+        background-color: rgba(193, 52, 56, .4);
+    }
+
+    .emotions .neutral {
+        border: none;
+        background-color: rgba(250, 238, 64, .4);
+    }
+
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+
+@media screen and (min-width: 2000px) {
+    .main-container {
+        margin: 20vh auto !important;
+        max-height: 60vh;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main-container {
+        border: none;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100%;
+        max-width: 768px;
+        height: 100vh;
+    }
+
+    .nav-container h2 {
+        padding-top: 2px;
+        font-size: .9rem;
+    }
+
+    .container {
+        width: 70%;
+        height: 86%;
+    }
+
+        .container input {
+            font-size: .7rem;
+            width: 70%;
+            height: 75%;
+        }
+}
+
+@media screen and (max-width: 426px) {
+    .main-container {
+        min-width: 426px;
+    }
+
+    .nav-container h2 {
+        padding-top: 3px;
+        font-size: .8rem;
+    }
+
+    .container {
+        min-width: 426px;
+        height: 100%;
+    }
+
+    .emotions {
+        align-items: center;
+    }
+}

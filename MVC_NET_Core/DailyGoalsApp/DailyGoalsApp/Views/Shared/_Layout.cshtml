@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Daily Goals</title>
+    <link rel="stylesheet" href="~/css/main.css">
+</head>
+<body>
+    <section class="main-container">
+        <header>
+            <!-- NAVBAR -->
+            <nav class="item navbar">
+                <div class="nav-container">
+                    <img src="~/img/main-logo.png" alt="">
+                    <h2>Daily Goals</h2>
+                    <img src="~/img/menu.png" alt="">
+                </div>
+            </nav>
+            <!-- /NAVBAR -->
+        </header>
+        <!-- MAIN CONTENT -->
+        <div class="item container">
+                @RenderBody()
+        </div>
+
+        <!-- /MAIN CONTENT -->
+        <!-- FOOTER -->
+        <footer class="item footer">
+            <h3>2020 - Daily Goals</h3>
+        </footer>
+        <!-- /FOOTER -->
+    </section>
+</body>
+</html>
